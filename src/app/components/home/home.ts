@@ -7,8 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './home.css',
 })
 export class Home {
-  myBolean = false;
+  myBolean = true;
   idButton = 'buton'
+  items = ['item1', 'item2', 'item3'];
 
   changeBolean(value: boolean) {
     this.myBolean = value;

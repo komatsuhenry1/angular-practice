@@ -4,3 +4,17 @@
 
 <button (click)="submit()">Click</button>
 
+
+@if (myBolean) {
+  <p>O valor é Verdadeiro!</p>
+} @else {
+  <p>O valor é Falso!</p>
+}
+
+<ul>
+  @for (item of items; track $index) {
+    <li>{{ item }}</li>
+  } @empty {
+    <li>A lista está vazia!</li>
+  }
+</ul>
