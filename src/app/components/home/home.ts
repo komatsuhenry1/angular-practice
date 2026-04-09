@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { SendForm } from '../../services/send-form';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './home.css',
 })
 export class Home {
+  private sendForm = inject(SendForm); // private is a convention, not a rule
   myBolean = true;
   idButton = 'buton'
   items = ['item1', 'item2', 'item3'];
@@ -16,6 +18,6 @@ export class Home {
   }
 
   submit(){
-    console.log('CLICOU!! ');
+    this.sendForm.sendFormService();
   }
 }
